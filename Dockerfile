@@ -20,7 +20,7 @@ RUN npm run build
 EXPOSE 3007
 
 # 启动项目
-CMD [ "npm", "run", "serve" ]
+CMD [ "node", "server.js" ]
 
 # docker build -t m-formtable .
 
