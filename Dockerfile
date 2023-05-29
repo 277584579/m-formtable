@@ -9,12 +9,12 @@ WORKDIR /usr/src/m-formtable
 COPY package*.json ./
 RUN yarn install
 
-# 打包
-RUN npm run build
 
 # 复制项目文件到容器中
 COPY . .
 
+# 打包
+RUN npm run build
 
 # 暴露端口
 EXPOSE 3007
