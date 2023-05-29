@@ -21,3 +21,7 @@ EXPOSE 3007
 
 # 启动项目
 CMD [ "npm", "run", "serve" ]
+
+# docker build -t m-formtable .
+
+# docker run -p 3007:3007 --name m-formtable-container -d m-formtable
