@@ -1,0 +1,342 @@
+// @import url(./variable.less);
+   // button组件start
+    .ark-btn{
+        border-radius: 2px;
+        padding: 0px 16px;
+        height: 30px;
+    }
+    .ark-btn-posdefault{
+        background:@primary-color;
+        border: 1px solid @primary-color;
+        font-size: @smallPrint;
+        font-weight: 400;
+        color: #FFFFFF;
+        &:hover{
+            color: #fff;
+            background-color: @primary-color;
+            border-color: @primary-color;
+        }
+        &:active {
+            color: #fff;
+            background-color: @primary-color;
+            border-color: @primary-color;
+        }
+    }
+    .ark-btn-default{
+        border: 1px solid @line-secondaryButton;
+        font-size: @smallPrint;
+        font-weight: 400;
+        color: @text-main;
+        &:hover{
+            color: #fff;
+            background-color: @primary-color;
+            border-color: @primary-color;
+        }
+        &:active {
+            color: #fff;
+            background-color: @primary-color;
+            border-color: @primary-color;
+        }
+    }
+    // button组件end
+
+    //输入框组件start
+    .ark-input-wrapper .ark-input{
+        height: 30px;
+        background: #FFFFFF;
+        border-radius: 4px;
+        border: 1px solid #BCBFC5;
+        font-size: @smallPrint;
+        font-weight: 400;
+        color: @text-main;
+        &:focus{
+            border-color: #4773b5;    
+            box-shadow:0 0 0 2px #D0DBF5 !important;
+        }
+        &:hover{
+            border-color: #4773b5;
+        }
+    }
+    .ark-input-innerWrap{
+        width: 30px;
+        position: absolute;
+        right: 41%;
+        top: 8%;
+    }
+    .ark-input-default{
+        width: 60%;
+    }
+    .ark-input[disabled]{
+        background: rgba(245,245,245,1);
+        border: 1px solid rgba(204,204,204,1) !important;
+        &:hover{
+            border: 1px solid rgba(204,204,204,1) !important;
+        }
+    }
+    // .formlayout{
+
+    // }
+    .formlayout-item{
+        padding-top: 12px;
+        
+        &>div:nth-child(2){
+            width: calc(~"100% - 80px") !important;
+            // background: red;
+        }
+        .label-name{
+            width: 80px;
+            display: flex;
+            text-align: right;
+            display: inline-block;
+            padding-right: 8px;
+            font-size: @smallPrint;
+            color: @text-main;
+            text-overflow: -o-ellipsis-lastline;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            line-clamp: 2;
+            -webkit-box-orient: vertical;
+        }
+        .icon-required{
+            color: #F23030;
+            .icon-tip{
+                transform: scale(1.8);
+                margin-top: 6px;
+            }
+            .label-desc{
+                color: #F23030;
+            }
+        }
+    }
+
+    //输入框组件end
+
+    //单选组件start
+    .ark-radio-inner{
+        width: 16px;
+        height: 16px;
+        &:after{
+            left: 3px;
+            top: 3px;
+            background-color: @primary-color;
+        }
+    }
+    .ark-radio-checked .ark-radio-inner{
+        border-color:@primary-color;
+    }
+    //单选组件end
+
+    //多选组件start
+    .ark-checkbox-checked .ark-checkbox-inner {
+        border-color: @primary-color;
+        background-color: @primary-color;
+        &:after{
+            top: 1px;
+            left: 4px;
+        }
+    }
+    .ark-checkbox{
+        .ark-checkbox-inner{
+            margin-right: 5px;
+        }
+    }
+    //多选组件end
+
+    //下拉选择start
+    .ark-select-visible{
+        .ark-select-arrow{
+            font-size : 12px;
+            transform:scale(0.5,0.5) rotate(180deg);
+        }
+    }
+    .ark-select-visible .ark-select-selection {
+        border-color: @primary-color;
+    }
+    .ark-select-item{
+        font-size: @smallPrint !important;
+        font-weight: 400;
+        color: #515A6E;
+    }
+    .ark-select-item-focus, .ark-select-item:hover {
+        background: @background-color;
+    }
+    .ark-select-item-selected, .ark-select-item-selected:hover {
+        background: @primary-color;
+        color: #FFFFFF;
+    }
+    .ark-select-single .ark-select-selection{
+        height: 100%;
+        .ark-select-selected-value{
+            font-size: 14px;
+            color: #212A3D;
+        }
+    }
+    .ark-select-arrow{
+        top:15px;
+        transform: scale(0.5);
+        font-size : 12px;
+        i{
+            font-size : 12px;
+            color: #212A3D;
+            &::before{
+                transform:rotate(7deg);
+            }
+        }
+    }
+    //下拉选择end
+
+    //月选择器start
+    .ark-date-picker-header{
+        font-size: @smallPrint;
+        font-weight: 500;
+        color: rgba(0, 0, 0, 0.85);
+    }
+    .ark-date-picker-header-label:hover{
+        color: @primary-color;
+    }
+    .ark-date-picker-cells{
+        font-size: @smallPrint;
+        font-weight: 400;
+        color: @text-main;
+    }
+    .ark-date-picker-cells-cell-selected:hover em, .ark-date-picker-cells-cell-selected em{
+        background: @background-color;
+        color: @text-main;
+    }
+    .ark-picker-panel-icon-btn:hover{
+        color: @primary-color;
+    }
+    //月选择器end
+
+    //年月日期选择start
+    .ark-picker-panel-body-wrapper ark-picker-panel-with-sidebar{
+        position: relative;
+    }
+    .ark-picker-panel-sidebar{
+        position: absolute;
+        width: 218px;
+        height: 40px;
+        top: 250px;
+        left: -8px;
+        background-color: #fff;
+        border: 1px solid #F0F0F0;
+        border-top: 0px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius:0 !important;
+    }
+    .ark-picker-panel-body{
+        position: absolute;
+        left: -100px;
+        border: 1px solid #F0F0F0;
+        background-color: #fff;
+    }
+    .ark-date-picker-cells-cell-selected:hover em, .ark-date-picker-cells-cell-selected em{
+        background: @primary-color;
+        border-radius: 2px;
+        color: #FFFFFF !important;
+    }
+    .ark-date-picker-cells-cell:hover em{
+        background: #D0DBF5;
+        color: @text-main;
+    }
+    .ark-date-picker-cells-cell-today em{
+        color: @primary-color;
+        &:after{
+            background: @primary-color;
+        }
+    }
+    //年月日期选择end
+
+    //日期区间start
+    //日期区间end
+
+    //下拉选择start
+    .ark-select{
+        width: 90px;
+        height: 30px;
+        
+    }
+    .ark-select-selection{
+        border-radius: 4px;
+        border: 1px solid #BCBFC5;
+    }
+    .ark-select-selection-head{
+        height: 100%;
+    }
+    .ark-select-visible .ark-select-selection{
+        box-shadow:0 0 0 2px #D0DBF5 !important;
+    }
+    .ark-select-single .ark-select-selection{
+        width: 90px;
+        .ark-select-placeholder{
+            height: 100%;
+            line-height: 30px;
+        }
+        .ark-select-selected-value{
+            height: 100%;
+            line-height: 30px;
+        }
+    }
+    
+    //下拉选择end
+
+    //标签页start
+    .ark-tabs-bar{
+        border-bottom:none
+    }
+    .ark-tabs-nav .ark-tabs-tab{
+        font-size: @textSize;
+        font-weight: 500;
+        &:hover{
+            color: @primary-color;
+        }
+    }
+    //标签页end
+.buttonsBlock{
+    display: inline-block;
+    position: relative;
+    // button组件start
+    .ark-btn{
+        border-radius: 4px;
+        padding: 2px 12px;
+    }
+    .ark-btn-default{
+        font-size: @notes;
+    }
+    .ark-btn>.ark-icon+span, .ark-btn>span+.ark-icon{
+        margin-left: 2px;
+    }
+    // button组件end
+
+    //button更多start
+    .drawer{
+        z-index: 2;
+        width: 136px;
+        position: absolute;
+        bottom: -51;
+        right: 0;
+        background: #FFFFFF;
+        box-shadow: 0px 9px 28px 8px rgba(0, 0, 0, 0.05), 0px 6px 16px 0px rgba(0, 0, 0, 0.08), 0px 3px 6px -4px rgba(0, 0, 0, 0.12);
+        border-radius: 2px;
+        div{
+            display: flex;
+            align-items: center;
+            padding-left: 13px;
+            height: 32px;
+            font-size: @smallPrint;
+            font-weight: 400;
+            color: @text-middle;
+            cursor: pointer;
+            // line-height: 32px;
+            &:hover{
+                background: @primary-color;
+                color: #fff;
+            }
+        }
+    }
+    //button更少end
+}

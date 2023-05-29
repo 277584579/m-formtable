@@ -1,0 +1,27 @@
+{
+  "presets": [
+    "@vue/cli-plugin-babel/preset",
+    [
+      "@babel/preset-env",
+      {
+        "modules": false
+      }
+    ]
+  ],
+  "plugins": [
+    [
+      "import",
+      {
+        "libraryName": "@syman/ark-ui",
+        "libraryDirectory": "src/components"
+      }
+    ],
+    [
+      "component",
+      {
+        "libraryName": "element-ui",
+        "styleLibraryName": "theme-chalk"
+      }
+    ]
+  ]
+}

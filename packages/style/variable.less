@@ -1,0 +1,40 @@
+@primary-color: #1950A3;// 设置主题
+@primary-color-middle: #D0DBF5;//主题色-中
+@primary-color-light: #F5F8FF;//主题色-浅
+@text-strong:#050505;//文字-强调
+@text-main:#212A3D;//文字-主
+@text-middle:#515A6E;//文字-中
+@text-secondary:#ACB1BD;//文字-次
+@background-color:#F5F6F9;//背景底色
+@disable-color:#CCCCCC;//禁用色
+@line-form:#DCDEE2;//线-表格
+@line-input:#BCBFC5;//线-输入框
+@line-secondaryButton:#6C717B;//线-次级按钮
+
+
+@pos-commit: #008000; //提交
+@pos-wait:#515a6e; //待批
+@pos-cancle:#515a6e;  //待取消
+@pos-cancle-background:#fef3f3;  //待取消
+
+@pos-table-count: #FF0000; //table总计
+
+@Headline:18px;
+@textSize:16px;
+@smallPrint:14px;
+@notes:12px;
+
+//  变量
+// 居中布局
+.flex-mixin(@jc:center, @ac: center){
+    display: flex;
+    justify-content: @jc;
+    align-items: @ac;
+  }
+  // 不换行
+  .no-wrap() {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  

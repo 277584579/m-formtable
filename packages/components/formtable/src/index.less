@@ -1,0 +1,60 @@
+@import url(../../../style/variable.less);
+.formtablePluginCompent {
+  padding: 16px 16px;
+  .line {
+    position: relative;
+    left: -16px;
+    width: calc(~"100% + 32px");
+    height: 1px;
+    background: @line-form;
+    margin: 14px 0 13px 0;
+  }
+  .chooseBlock {
+    margin-bottom: 10px;
+    .flex-mixin(space-between);
+    &-left{
+      .flex-mixin(center,center);
+    }
+  }
+  .FilterSettings {
+    margin: 10px 0 11px 0;
+    font-size: @notes;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    // color: #515a6e;
+    color: @text-middle;
+    span {
+      color: #ff0000;
+    }
+  }
+  // .statusTips {
+  //   display: flex;
+  //   align-items: center;
+  //   span {
+  //     padding: 0 8px;
+  //     height: 18px;
+  //     border: 1px solid @line-form;
+  //     font-size: @notes;
+  //     font-weight: 400;
+  //     line-height: 16px;
+  //     margin-left: 10px;
+  //   }
+  //   .status {
+  //     font-size: @notes;
+  //     font-weight: 400;
+  //     color: @text-middle;
+  //   }
+  //   .commit {
+  //     background: #ffffff;
+  //     color: @pos-commit;
+  //   }
+  //   .wait {
+  //     background: #ffffff;
+  //     color: @pos-wait;
+  //   }
+  //   .cancle {
+  //     background: #fef3f3;
+  //     color: @pos-cancle;
+  //   }
+  // }
+}
