@@ -8,13 +8,13 @@ WORKDIR /usr/src/m-formtable
 # 安装依赖
 COPY package*.json ./
 RUN yarn install
-RUN yarn add express -D
+
+# 打包
+RUN npm run build
 
 # 复制项目文件到容器中
 COPY . .
 
-# 打包
-RUN npm run build
 
 # 暴露端口
 EXPOSE 3007
